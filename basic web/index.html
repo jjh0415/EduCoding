@@ -52,21 +52,40 @@
     -->
 <body>
 
-    <h1><a href="index.html">Web</a></h1>
+    <h1><a href="/basic web/index.html">Web</a></h1>
+
     <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white'; 
+    let target = document.querySelector('body'); 
+    if (this.value === 'night') {
+        target.style.backgroundColor='black'; 
+        target.style.color='white'; 
+        this.value = 'day';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+            alist[i].style.color = 'pink';
+            i++;
+        }
+    } else {
+        target.style.backgroundColor='white'; 
+        target.style.color='black';
+        this.value = 'night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+            alist[i].style.color = 'red';
+            i++;
+        }
+    }
     ">
-     <input type="button" value="day" onclick="
-     document.querySelector('body').style.backgroundColor='white';
-     document.querySelector('body').style.color='black'; 
-     ">
+
     <div id="grid">
         <ol>
-            <li><a href="1.html" >HTML</a></li>
-            <li><a href="2.html" >CSS</a></li>
+            <li><a href="1.html">html</a></li>
+            <li><a href="2.html">CSS</a></li>
             <li><a href="3.html">JavaScript</a></li>
         </ol>
+
         <div id="article">
             <img src="/image/coding.jpg" width="100%">
 
