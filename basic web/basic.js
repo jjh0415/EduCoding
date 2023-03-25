@@ -56,9 +56,55 @@ while(i<l.length){
     i++
 }
 
-var coworkers = ["jihwan", 'juju', 'jung', 'lee', 'mama'];
+var coworkers = ["jihwan", 'jueun', 'jung', 'lee', 'mama'];
 i = 0;
 while(i<coworkers.length){
     console.log('나는 ' + coworkers[i] + ' 입니다')
     i++
 }
+
+// 함수(funtion) = 수납장
+// 1. basic
+function two(){
+    return 1+1;
+}
+console.log(two());
+
+// 2. 매개변수(parameter) & 인자(argument) -> 입력
+function plus(a,b){ // (a,b) <- 매개변수 - 함수 안으로 매개 해주는 것
+    return a+b;
+}
+console.log(plus(2,3)); // (...) <- 인자  / 함수의 입력갑(인자 -> 매개변수)
+
+// 3. 리턴(return)  
+function plus(a,b){ 
+    return a+b; // 표현식 -> 값을 되돌려줌
+}
+
+// 객체(object) -> 이름이 있는 정리정돈 상자 / 순서가 없이 저장됨
+// 1. 문법
+var obs = { // {} -> object는 대괄호로 표시
+    "programmer":"jihwan",
+    "designer" : "jueun"
+};
+
+console.log(obs.programmer);
+console.log(obs.designer);
+obs["bookkeeper"] = "odajueun";
+console.log(Object.values(obs)); // values 값을 배열로 출력
+console.log(Object.keys(obs)); // key 값을 배열로 출력
+console.log(Object.entries(obs)); // key : value 값을 배열로 출력
+
+// 2. 객체&반복문
+for(var key in obs){
+    console.log(key+ ' : '+ obs[key]);
+}
+
+// 3. 객체 프로퍼티(property)와 메소드(method)
+
+obs.showAll = function(){
+        for(var key in this){
+        console.log(key+ ' : '+ this[key]);
+    }
+}
+obs.showAll(); // 객체에 소속된 함수 = 메소드 / 객체에 소속된 변수 = 프로퍼티
