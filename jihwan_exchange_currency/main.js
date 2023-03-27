@@ -33,6 +33,7 @@
     // 2. console.log(currencyRatio['UK']['unit']);
 let fromCurrency = 'USD'
 let toCurrency = 'USD'
+let convertUnit = '달러'
 
 document.querySelectorAll("#from-currency-list a")
 .forEach((menu) => menu.addEventListener("click",function(){
@@ -46,6 +47,8 @@ document.querySelectorAll("#to-currency-list a")
 .forEach((menu) => menu.addEventListener("click",function(){
     document.getElementById("to-button").textContent = this.textContent;
     toCurrency = this.textContent;
+    
+    
     reversconvert();
 }));
 

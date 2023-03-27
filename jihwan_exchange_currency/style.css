@@ -1,8 +1,16 @@
-
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  min-height: 100vh;
+  vertical-align: baseline;
+}
 
 .exchange_box{
-    width:500px;
+    width: 400px;
     border: 1px solid black;
+    
 }
 /* Style The Dropdown Button */
 .dropbtn {
